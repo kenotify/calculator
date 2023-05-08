@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  
+<div class="mx-auto overflow-hidden mt-10 shadow-lg mb-2 shadow-lg border rounded-lg md:w-3/6 sm:w-4/6">
+    <div class="">
+      <div class="p-5 text-blue-500 text-center text-3xl bg-blue-900"><span class="text-orange-500 font-bold">Calculator</span></div>
+      <div id='output' class="pt-16 p-5 pb-0 text-black text-right text-3xl bg-red-100"></div>
+      <div class="p-5 text-black text-right text-3xl bg-red-100"> <span class="text-orange-500"></span></div>
+      
+      
+ <div class="flex items-stretch bg-blue-900 h-24">
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('%')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">%</button>
+    </div>
+  
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput(' ( ')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">(</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput(')')"  class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">)</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('/')"  class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">÷</button>
+    </div>
+</div>
+      
+<div class="flex items-stretch bg-blue-900 h-24">
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('7')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">7</button>
+    </div>
+  
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('8')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">8</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('9')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">9</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('*')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">×</button>
+    </div>
+</div>
+      
+<div class="flex items-stretch bg-blue-900 h-24">
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('4')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">4</button>
+    </div>
+  
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('5')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">5</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('6')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">6</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('-')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">-</button>
+    </div>
+</div>
+      
+<div class="flex items-stretch bg-blue-900 h-24">
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('1')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">1</button>
+    </div>
+  
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('2')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">2</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('3')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">3</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('+')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">+</button>
+    </div>
+</div>
+      
+
+<div class="flex items-stretch bg-blue-900 h-24 mb-4">
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="clearHead()" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+        focus:outline-none">AC</button>
+    </div>
+  
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('0')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">0</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="addInput('.')" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">.</button>
+    </div>
+   
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <div style="display:flex;flex-direction:column;">
+      </div>
+    <div class="flex-1 px-2 py-2 justify-center flex items-center text-black text-2xl font-semibold">
+      <button onclick="calculate()" class="rounded-full h-20 w-20 flex items-center bg-blue-400 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 
+      focus:outline-none">=</button>
+    </div>
+</div>    
+  </div>
+
+</div>
+
+</body>
+<script>
+  function addInput(value) {
+    var output = document.getElementById('output');
+    output.innerHTML += value;
+  }
+  
+  function calculate() {
+    var output = document.getElementById('output');
+    var result = eval(output.innerHTML);
+    output.innerHTML = result;
+  }
+  
+  function clearHead() {
+    var output = document.getElementById('output');
+    output.innerHTML = '';
+  }
+   </script>
+   
+</html>
